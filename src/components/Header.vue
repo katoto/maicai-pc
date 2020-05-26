@@ -54,6 +54,7 @@ export default {
   }
   .nav-box {
     margin-top: 70px;
+    display: flex;
     .nav a {
       color: #fff;
       margin: 0 25px;
@@ -62,6 +63,7 @@ export default {
       text-align: center;
     }
     .nav {
+      cursor: pointer;
       &:last-child {
         padding-right: 11px;
       }
