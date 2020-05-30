@@ -1,26 +1,26 @@
 <template>
   <header class="head">
     <div class="box">
-      <a
+      <router-link
         class="logo"
+        to="/"
         placeholder="百姓餐桌"
-        href="javascript:;"
-      ><img src="../assets/head/logo.png" /></a>
+      ><img src="../assets/head/logo.png" /></router-link>
       <ul class="nav-box">
-        <li class="nav active">
-          <a target="_blank">公司简介</a>
+        <li class="nav">
+          <router-link to="/intro">公司简介</router-link>
         </li>
         <li class="nav">
-          <a target="_blank">动态</a>
+          <router-link to="/news">动态</router-link>
         </li>
         <li class="nav">
-          <a target="_blank">大健康</a>
+          <router-link to="/bigHealth">大健康</router-link>
         </li>
         <li class="nav">
-          <a target="_blank">服务支持</a>
+          <router-link to="/server">服务支持</router-link>
         </li>
         <li class="nav">
-          <a target="_blank">联系我们</a>
+          <router-link to="/contentUs">联系我们</router-link>
         </li>
       </ul>
     </div>
@@ -44,7 +44,6 @@ export default {
     width: 1205px;
     margin: 0 auto;
     height: 100%;
-    border: 1px solid rebeccapurple;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -61,11 +60,16 @@ export default {
       padding: 14px 0;
       font-size: 24px;
       text-align: center;
+      text-decoration: none;
     }
     .nav {
       cursor: pointer;
       &:last-child {
         padding-right: 11px;
+      }
+      .router-link-active {
+        color: #ffd900;
+        border-bottom: 1px solid #ffd900;
       }
     }
     .active a {
