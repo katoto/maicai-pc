@@ -1,11 +1,9 @@
 <template>
   <header class="head">
     <div class="box">
-      <router-link
-        class="logo"
-        to="/"
-        placeholder="百姓餐桌"
-      ><img src="../assets/head/logo.png" /></router-link>
+      <router-link class="logo" to="/" placeholder="百姓餐桌">
+        <img src="../assets/head/logo.png" />
+      </router-link>
       <ul class="nav-box">
         <li class="nav">
           <router-link to="/intro">公司简介</router-link>

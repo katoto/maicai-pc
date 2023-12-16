@@ -4,20 +4,20 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div> -->
-    <Header></Header>
+    <v-Header></v-Header>
     <router-view />
-    <Footer></Footer>
+    <v-Footer></v-Footer>
   </div>
 </template>
 <script>
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import VHeader from "./components/Header";
+import VFooter from "./components/Footer";
 
 export default {
   name: "home",
   components: {
-    Header,
-    Footer
+    VHeader,
+    VFooter
   },
   props: {
     msg: String

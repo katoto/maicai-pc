@@ -1,11 +1,7 @@
 <template>
-  <div class="foot">
-    <img
-      class="img"
-      src="@/assets/foot/1.png"
-      alt="公司简介&联系我们"
-    />
-  </div>
+  <footer class="foot">
+    <img class="img" src="@/assets/foot/1.png" alt="公司简介&联系我们" />
+  </footer>
 </template>
 
 <script>
