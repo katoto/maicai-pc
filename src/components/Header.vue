@@ -5,6 +5,9 @@
         <img src="../assets/head/logo.png" />
       </router-link>
       <ul class="nav-box">
+        <li class="nav showpc">
+          <router-link to="/">首页</router-link>
+        </li>
         <li class="nav">
           <router-link to="/intro">公司简介</router-link>
         </li>
@@ -29,13 +32,13 @@
 export default {
   name: "head",
   props: {
-    msg: String
-  }
+    msg: String,
+  },
 };
 </script>
 <style scoped lang="less">
 .head {
-  height: 150px;
+  height: 108px;
   width: 100%;
   background-color: #00643d;
   .box {
@@ -47,11 +50,15 @@ export default {
     justify-content: space-between;
     .logo img {
       display: block;
+      width: 300px;
     }
   }
   .nav-box {
-    margin-top: 70px;
     display: flex;
+    .nav {
+      display: flex;
+      align-items: center;
+    }
     .nav a {
       color: #fff;
       margin: 0 25px;
@@ -74,6 +81,31 @@ export default {
       color: #ffd900;
       border-bottom: 1px solid #ffd900;
     }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .head {
+    // height: 73px;
+  }
+  .head .box {
+    width: 100%;
+    overflow: hidden;
+
+    .logo img {
+      display: block;
+      // width: 200px;
+    }
+  }
+
+  .head .box .nav-box .nav a {
+    margin: 0 14px;
+    padding: 14px 0;
+    font-size: 13px;
+  }
+
+  .head .nav-box .showpc {
+    display: none;
   }
 }
 </style>
